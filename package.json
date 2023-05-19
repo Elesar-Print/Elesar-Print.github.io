@@ -1,0 +1,24 @@
+{
+  "name": "elesar-print.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Elesar-Print/Elesar-Print.github.io.git"
+  },
+  "author": "vassdeniss",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Elesar-Print/Elesar-Print.github.io/issues"
+  },
+  "homepage": "https://github.com/Elesar-Print/Elesar-Print.github.io#readme",
+  "devDependencies": {
+    "eslint": "^8.40.0"
+  },
+  "dependencies": {
+    "lit-html": "^2.7.4",
+    "page": "^1.11.6"
+  }
+}
