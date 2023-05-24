@@ -4,7 +4,7 @@ export function renderHome(ctx) {
   ctx.render(homeTemplate());
 }
 
-const homeTemplate = () => html` <link
+const homeTemplate = () => html`<link
     href="../../static/css/home.css"
     rel="stylesheet"
   />

@@ -24,30 +24,14 @@ export const layoutTemplate = (content) => html`<header>
           <li class="nav-item">
             <a class="nav-link" href="#">Link</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#">Disabled</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle"
-              href="http://example.com"
-              id="dropdown01"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
-              >Dropdown</a
-            >
-            <div class="dropdown-menu" aria-labelledby="dropdown01">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <a class="dropdown-item" href="#">Something else here</a>
-            </div>
-          </li>
         </ul>
       </div>
     </nav>
   </header>
-  <main role="main">${content}</main>
+  <div>
+    <main role="main">${content}</main>
+  </div>
   <footer class="container">
     <p>&copy; Elesar Print 2018-${new Date().getFullYear()}</p>
-  </footer>`;
+  </footer>
+</div>`;
