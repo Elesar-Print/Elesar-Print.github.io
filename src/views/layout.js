@@ -16,13 +16,13 @@ export const layoutTemplate = (content) => html`<header>
       </button>
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#"
-              >Home <span class="sr-only">(current)</span></a
+          <li class="nav-item">
+            <a class="nav-link" href="/"
+              >Home</a
             >
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a class="nav-link" href="/contact">Contacts</a>
           </li>
         </ul>
       </div>

@@ -6,6 +6,9 @@ export function renderContact(ctx) {
   function sendEmail(event) {
     event.preventDefault();
 
+    const button = document.getElementById('send-email');
+    button.disabled = true;
+
     emailjs.init('6rh4IuhCdUoLBLrsj');
 
     const params = {
@@ -32,7 +35,8 @@ export function renderContact(ctx) {
           'error'
         );
         console.log(err);
-      });
+      })
+      .finally(() => (button.disabled = false));
   }
 }
 
@@ -43,7 +47,7 @@ const contactsTemplate = (sendEmail) =>
       <div class="col-md-6">
         <div class="embed-responsive embed-responsive-1by1">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1465.2501805826084!2d23.29375523894639!3d42.73546489279008!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40aa903e2394fb2b%3A0x96bd9851abd05e3f!2sElesar%20Print!5e0!3m2!1sbg!2sbg!4v1684941238692!5m2!1sbg!2sbg"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2930.5208804988956!2d23.29162087643999!3d42.73503067116057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40aa903e24151d03%3A0xc909551ffc0546ae!2z0YPQuy4g4oCe0JHRj9C7INC70Y7Qu9GP0LrigJwgMiwgMTIzMSDQti7Qui4g0J3QsNC00LXQttC00LAgNCwg0KHQvtGE0LjRjw!5e0!3m2!1sbg!2sbg!4v1684948566435!5m2!1sbg!2sbg"
             width="600"
             height="450"
             style="border:0;"
@@ -68,8 +72,8 @@ const contactsTemplate = (sendEmail) =>
               </li>
               <li>
                 <i class="fas fa-map-marker-alt mr-2"></i>
-                <strong>Address:</strong> ул. „Бял люляк“, 1231 ж.к. Надежда 4,
-                София
+                <strong>Address:</strong> ул. "Бял люляк" 2, 1231 ж.к. Надежда
+                4, София
               </li>
             </ul>
             <h3 class="card-title">Send us an email</h3>
@@ -101,7 +105,9 @@ const contactsTemplate = (sendEmail) =>
                   placeholder="Enter your message"
                 ></textarea>
               </div>
-              <button type="submit" class="btn btn-primary">Send</button>
+              <button id="send-email" type="submit" class="btn btn-primary">
+                Send
+              </button>
             </form>
           </div>
         </div>
