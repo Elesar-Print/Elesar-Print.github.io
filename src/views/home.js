@@ -2,11 +2,12 @@ import { html } from '../lib/lit-html.js';
 import { text } from '../utils.js';
 
 export function renderHome(ctx) {
+  console.log(ctx.lang);
   ctx.render(
     homeTemplate(
-      text.bg.welcomeHeader,
-      text.bg.welcomeText,
-      text.bg.buttonLearnMore
+      text[localStorage.getItem('lang') || 'en'].welcomeHeader,
+      text[localStorage.getItem('lang') || 'en'].welcomeText,
+      text[localStorage.getItem('lang') || 'en'].buttonLearnMore
     )
   );
 }
