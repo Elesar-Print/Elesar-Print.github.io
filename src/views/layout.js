@@ -1,8 +1,10 @@
 import { html } from '../lib/lit-html.js';
 
 export const layoutTemplate = (ctx, content) => html`<header>
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-      <a class="navbar-brand" href="/">Elesar Print</a>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-primary">
+      <a class="logo navbar-brand text-white font-weight-bold" href="/">
+        <img src="../../static/images/logo.png" width=60 heigth=60 /> <span>Elesar Print</span>
+      </a>
       <button
         class="navbar-toggler"
         type="button"
@@ -17,15 +19,15 @@ export const layoutTemplate = (ctx, content) => html`<header>
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-            <a class="nav-link" href="/"
+            <a class="nav-link text-white font-weight-bold" href="/"
               >Home</a
             >
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/contact">Contacts</a>
+            <a class="nav-link text-white font-weight-bold" href="/contact">Contacts</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#"  id="navbarDropdown" role="button" data-toggle="dropdown"   aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link font-weight-bold text-white dropdown-toggle" href="#"  id="navbarDropdown" role="button" data-toggle="dropdown"   aria-haspopup="true" aria-expanded="false">
               Language
             </a>
             ${console.log(ctx.lang)}

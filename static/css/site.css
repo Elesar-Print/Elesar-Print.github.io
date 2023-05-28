@@ -1,3 +1,18 @@
 body {
-  padding-top: 3.5rem;
+  padding-top: 4.5rem;
+}
+
+.bg-primary,
+.btn-primary {
+  background-color: #8b0000 !important;
+}
+
+.btn-primary {
+  border: none !important;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }

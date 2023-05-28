@@ -5,9 +5,9 @@ export function renderHome(ctx) {
   console.log(ctx.lang);
   ctx.render(
     homeTemplate(
-      text[localStorage.getItem('lang') || 'en'].welcomeHeader,
-      text[localStorage.getItem('lang') || 'en'].welcomeText,
-      text[localStorage.getItem('lang') || 'en'].buttonLearnMore
+      text.home.welcomeHeader[localStorage.getItem('lang') || 'bg'],
+      text.home.welcomeText[localStorage.getItem('lang') || 'bg'],
+      text.home.buttonLearnMore[localStorage.getItem('lang') || 'bg']
     )
   );
 }
