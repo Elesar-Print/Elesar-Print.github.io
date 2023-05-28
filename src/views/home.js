@@ -7,12 +7,13 @@ export function renderHome(ctx) {
     homeTemplate(
       text.home.welcomeHeader[localStorage.getItem('lang') || 'bg'],
       text.home.welcomeText[localStorage.getItem('lang') || 'bg'],
-      text.home.buttonLearnMore[localStorage.getItem('lang') || 'bg']
+      text.home.buttonLearnMore[localStorage.getItem('lang') || 'bg'],
+      text.home.clients[localStorage.getItem('lang') || 'bg']
     )
   );
 }
 
-const homeTemplate = (header, text, buttonText) => html`<link
+const homeTemplate = (header, text, buttonText, clients) => html`<link
     href="../../static/css/home.css"
     rel="stylesheet"
   />
@@ -75,7 +76,7 @@ const homeTemplate = (header, text, buttonText) => html`<link
     <hr />
   </div>
   <div class="container mb-5">
-    <h2>Our Clients</h2>
+    <h2>${clients}</h2>
     <section class="customer-logos slider">
       <div class="slide">
         <img

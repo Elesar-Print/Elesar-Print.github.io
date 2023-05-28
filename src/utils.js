@@ -1,4 +1,26 @@
 export const text = {
+  nav: {
+    title: {
+      bg: 'Елесар Принт',
+      en: 'Elesar Print',
+    },
+    home: {
+      bg: 'Начална Страница',
+      en: 'Home',
+    },
+    contacts: {
+      bg: 'Контакти',
+      en: 'Contacts',
+    },
+    language: {
+      bg: 'Език',
+      en: 'Language',
+    },
+  },
+  footer: {
+    bg: 'Елесар Принт',
+    en: '',
+  },
   home: {
     welcomeHeader: {
       bg: 'Елесар Принт',
@@ -11,6 +33,64 @@ export const text = {
     buttonLearnMore: {
       bg: 'Научете повече',
       en: 'Learn more',
+    },
+    clients: {
+      bg: 'Наще Клиенти',
+      en: 'Our Clients',
+    },
+  },
+  contacts: {
+    title: {
+      bg: 'Контакти',
+      en: 'Contacts',
+    },
+    find: {
+      bg: 'Каде може да ни намериш',
+      en: 'Where to find us',
+    },
+    phone: {
+      bg: 'Телефон',
+      en: 'Phone',
+    },
+    email: {
+      bg: 'Емайл',
+      en: 'Email',
+    },
+    address: {
+      bg: 'Адрес',
+      en: 'Address',
+    },
+    sendEmail: {
+      bg: 'Прати ни емайл',
+      en: 'Send us an email',
+    },
+    yourName: {
+      bg: 'Твоето Име',
+      en: 'Your Name',
+    },
+    yourNamePlaceholder: {
+      bg: 'Напиши име',
+      en: 'Enter your name',
+    },
+    yourEmail: {
+      bg: 'Твоят Емайл',
+      en: 'Your email',
+    },
+    yourEmailPlaceholder: {
+      bg: 'Напиши емайл',
+      en: 'Enter your email',
+    },
+    yourMessage: {
+      bg: 'Съобщение',
+      en: 'Message',
+    },
+    yourMessagePlaceholder: {
+      bg: 'Напиши съобщение',
+      en: 'Enter your message',
+    },
+    sendButton: {
+      bg: 'Изпрати',
+      en: 'Send',
     },
   },
 };

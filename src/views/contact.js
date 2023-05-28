@@ -1,4 +1,5 @@
 import { html } from '../lib/lit-html.js';
+import { text } from '../utils.js';
 
 export function renderContact(ctx) {
   ctx.render(contactsTemplate(sendEmail));
@@ -46,7 +47,9 @@ export function renderContact(ctx) {
 
 const contactsTemplate = (sendEmail) =>
   html`<div class="container mt-4">
-    <h1 class="text-center">Contacts</h1>
+    <h1 class="text-center">
+      ${text.contacts.title[localStorage.getItem('lang') || 'bg']}
+    </h1>
     <div class="row mt-4">
       <div class="col-md-6">
         <div class="embed-responsive embed-responsive-1by1">
@@ -64,53 +67,88 @@ const contactsTemplate = (sendEmail) =>
       <div class="col-md-6">
         <div class="card">
           <div class="card-body">
-            <h3 class="card-title">Where to find us</h3>
+            <h3 class="card-title">
+              ${text.contacts.find[localStorage.getItem('lang') || 'bg']}
+            </h3>
             <ul class="list-unstyled">
               <li class="mb-3">
                 <i class="fas fa-phone mr-2"></i>
-                <strong>Phone:</strong> +359 88 427 8954
+                <strong>
+                  ${text.contacts.phone[localStorage.getItem('lang') || 'bg']}
+                  :</strong
+                >
+                +359 88 427 8954
               </li>
               <li class="mb-3">
                 <i class="fas fa-envelope mr-2"></i>
-                <strong>Email:</strong> elesar.print@gmail.com
+                <strong>
+                  ${text.contacts.email[localStorage.getItem('lang') || 'bg']}
+                  :</strong
+                >
+                elesar.print@gmail.com
               </li>
               <li>
                 <i class="fas fa-map-marker-alt mr-2"></i>
-                <strong>Address:</strong> ул. "Бял люляк" 2, 1231 ж.к. Надежда
-                4, София
+                <strong>
+                  ${text.contacts.address[localStorage.getItem('lang') || 'bg']}
+                  :</strong
+                >
+                ул. "Бял люляк" 2, 1231 ж.к. Надежда 4, София
               </li>
             </ul>
-            <h3 class="card-title">Send us an email</h3>
+            <h3 class="card-title">
+              ${text.contacts.sendEmail[localStorage.getItem('lang') || 'bg']}
+            </h3>
             <form id="contact-form" @submit="${sendEmail}">
               <div class="form-group">
-                <label for="name">Your Name</label>
+                <label for="name">
+                  ${text.contacts.yourName[
+                    localStorage.getItem('lang') || 'bg'
+                  ]}
+                </label>
                 <input
                   type="text"
                   class="form-control"
                   id="name"
-                  placeholder="Enter your name"
+                  placeholder=${text.contacts.yourNamePlaceholder[
+                    localStorage.getItem('lang') || 'bg'
+                  ]}
                 />
               </div>
               <div class="form-group">
-                <label for="email">Your Email</label>
+                <label for="email">
+                  ${text.contacts.yourEmail[
+                    localStorage.getItem('lang') || 'bg'
+                  ]}
+                </label>
                 <input
                   type="email"
                   class="form-control"
                   id="email"
-                  placeholder="Enter your email"
+                  placeholder=${text.contacts.yourEmailPlaceholder[
+                    localStorage.getItem('lang') || 'bg'
+                  ]}
                 />
               </div>
               <div class="form-group">
-                <label for="message">Message</label>
+                <label for="message">
+                  ${text.contacts.yourMessage[
+                    localStorage.getItem('lang') || 'bg'
+                  ]}
+                </label>
                 <textarea
                   class="form-control"
                   id="message"
                   rows="5"
-                  placeholder="Enter your message"
+                  placeholder=${text.contacts.yourMessagePlaceholder[
+                    localStorage.getItem('lang') || 'bg'
+                  ]}
                 ></textarea>
               </div>
               <button id="send-email" type="submit" class="btn btn-primary">
-                Send
+                ${text.contacts.sendButton[
+                  localStorage.getItem('lang') || 'bg'
+                ]}
               </button>
             </form>
           </div>

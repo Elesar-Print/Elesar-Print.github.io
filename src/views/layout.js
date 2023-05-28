@@ -1,9 +1,12 @@
 import { html } from '../lib/lit-html.js';
+import { text } from '../utils.js';
 
 export const layoutTemplate = (ctx, content) => html`<header>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-primary">
       <a class="logo navbar-brand text-white font-weight-bold" href="/">
-        <img src="../../static/images/logo.png" width=60 heigth=60 /> <span>Elesar Print</span>
+        <img src="../../static/images/logo.png" width=60 heigth=60 /> <span>${
+          text.nav.title[localStorage.getItem('lang') || 'bg']
+        }</span>
       </a>
       <button
         class="navbar-toggler"
@@ -20,20 +23,25 @@ export const layoutTemplate = (ctx, content) => html`<header>
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
             <a class="nav-link text-white font-weight-bold" href="/"
-              >Home</a
+              ><i class="fa-solid fa-house"></i> ${
+                text.nav.home[localStorage.getItem('lang') || 'bg']
+              }</a
             >
           </li>
           <li class="nav-item">
-            <a class="nav-link text-white font-weight-bold" href="/contact">Contacts</a>
+            <a class="nav-link text-white font-weight-bold" href="/contact"><i class="fa-solid fa-phone"></i> ${
+              text.nav.contacts[localStorage.getItem('lang') || 'bg']
+            }</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link font-weight-bold text-white dropdown-toggle" href="#"  id="navbarDropdown" role="button" data-toggle="dropdown"   aria-haspopup="true" aria-expanded="false">
-              Language
+              <i class="fa-solid fa-globe"></i> ${
+                text.nav.language[localStorage.getItem('lang') || 'bg']
+              }
             </a>
-            ${console.log(ctx.lang)}
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <a class="dropdown-item" href="javascript:void(0)" @click="${() =>
-                ctx.setLang('en')}">English</a>
+                ctx.setLang('en')}">English </a>
               <a class="dropdown-item" href="javascript:void(0)" @click="${() =>
                 ctx.setLang('bg')}">Български</a>
             </div>
@@ -46,6 +54,8 @@ export const layoutTemplate = (ctx, content) => html`<header>
     <main role="main">${content}</main>
   </div>
   <footer class="container">
-    <p>&copy; Elesar Print 2018-${new Date().getFullYear()}</p>
+    <p>&copy; ${
+      text.footer[localStorage.getItem('lang') || 'bg']
+    } 2018-${new Date().getFullYear()}</p>
   </footer>
 </div>`;
