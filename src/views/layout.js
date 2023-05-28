@@ -2,7 +2,7 @@ import { html } from '../lib/lit-html.js';
 
 export const layoutTemplate = (content) => html`<header>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-      <a class="navbar-brand" href="#">Elesar Print</a>
+      <a class="navbar-brand" href="/">Elesar Print</a>
       <button
         class="navbar-toggler"
         type="button"

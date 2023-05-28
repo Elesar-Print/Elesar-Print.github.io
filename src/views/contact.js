@@ -17,24 +17,28 @@ export function renderContact(ctx) {
       message: document.getElementById('message').value,
     };
 
+    if (!params.name || !params.email || !params.message) {
+      Swal.fire('Error!', 'All fields are required!', 'error');
+      button.disabled = false;
+      return;
+    }
+
     const serviceId = 'service_yx05bzk';
     const templateId = 'template_pvh9qqc';
-
     emailjs
       .send(serviceId, templateId, params)
-      .then((res) => {
+      .then((_) => {
         document.getElementById('name').value = '';
         document.getElementById('email').value = '';
         document.getElementById('message').value = '';
         Swal.fire('Success!', 'Your email has been sent!', 'success');
       })
-      .catch((err) => {
+      .catch((_) => {
         Swal.fire(
           'Error!',
           'Something went wrong with sending your email!',
           'error'
         );
-        console.log(err);
       })
       .finally(() => (button.disabled = false));
   }
@@ -60,7 +64,7 @@ const contactsTemplate = (sendEmail) =>
       <div class="col-md-6">
         <div class="card">
           <div class="card-body">
-            <h3 class="card-title">Where to Find Us</h3>
+            <h3 class="card-title">Where to find us</h3>
             <ul class="list-unstyled">
               <li class="mb-3">
                 <i class="fas fa-phone mr-2"></i>
