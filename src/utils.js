@@ -19,7 +19,7 @@ export const text = {
   },
   footer: {
     bg: 'Елесар Принт',
-    en: '',
+    en: 'Elesar Print',
   },
   home: {
     welcomeHeader: {
@@ -35,7 +35,7 @@ export const text = {
       en: 'Learn more',
     },
     clients: {
-      bg: 'Наще Клиенти',
+      bg: 'Нашите Клиенти',
       en: 'Our Clients',
     },
   },
@@ -45,7 +45,7 @@ export const text = {
       en: 'Contacts',
     },
     find: {
-      bg: 'Каде може да ни намериш',
+      bg: 'Каде можете да ни намерите',
       en: 'Where to find us',
     },
     phone: {
@@ -61,23 +61,23 @@ export const text = {
       en: 'Address',
     },
     sendEmail: {
-      bg: 'Прати ни емайл',
+      bg: 'Изпратете ни емайл',
       en: 'Send us an email',
     },
     yourName: {
-      bg: 'Твоето Име',
+      bg: 'Вашето Име',
       en: 'Your Name',
     },
     yourNamePlaceholder: {
-      bg: 'Напиши име',
+      bg: 'Напишете име',
       en: 'Enter your name',
     },
     yourEmail: {
-      bg: 'Твоят Емайл',
+      bg: 'Вашият Емайл',
       en: 'Your email',
     },
     yourEmailPlaceholder: {
-      bg: 'Напиши емайл',
+      bg: 'Напишете емайл',
       en: 'Enter your email',
     },
     yourMessage: {
@@ -85,7 +85,7 @@ export const text = {
       en: 'Message',
     },
     yourMessagePlaceholder: {
-      bg: 'Напиши съобщение',
+      bg: 'Напишете съобщение',
       en: 'Enter your message',
     },
     sendButton: {

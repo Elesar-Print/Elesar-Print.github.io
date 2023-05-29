@@ -2,7 +2,6 @@ import { html } from '../lib/lit-html.js';
 import { text } from '../utils.js';
 
 export function renderHome(ctx) {
-  console.log(ctx.lang);
   ctx.render(
     homeTemplate(
       text.home.welcomeHeader[localStorage.getItem('lang') || 'bg'],
@@ -11,6 +10,32 @@ export function renderHome(ctx) {
       text.home.clients[localStorage.getItem('lang') || 'bg']
     )
   );
+
+  $(document).ready(function () {
+    $('.customer-logos').slick({
+      slidesToShow: 6,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 1500,
+      arrows: false,
+      dots: false,
+      pauseOnHover: false,
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 4,
+          },
+        },
+        {
+          breakpoint: 520,
+          settings: {
+            slidesToShow: 3,
+          },
+        },
+      ],
+    });
+  });
 }
 
 const homeTemplate = (header, text, buttonText, clients) => html`<link
