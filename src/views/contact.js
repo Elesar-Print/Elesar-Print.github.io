@@ -19,7 +19,11 @@ export function renderContact(ctx) {
     };
 
     if (!params.name || !params.email || !params.message) {
-      Swal.fire('Error!', 'All fields are required!', 'error');
+      Swal.fire(
+        text.alert.error[localStorage.getItem('lang') || 'bg'],
+        text.alert.fields[localStorage.getItem('lang') || 'bg'],
+        'error'
+      );
       button.disabled = false;
       return;
     }
@@ -32,12 +36,16 @@ export function renderContact(ctx) {
         document.getElementById('name').value = '';
         document.getElementById('email').value = '';
         document.getElementById('message').value = '';
-        Swal.fire('Success!', 'Your email has been sent!', 'success');
+        Swal.fire(
+          text.alert.success[localStorage.getItem('lang') || 'bg'],
+          text.alert.sEmail[localStorage.getItem('lang') || 'bg'],
+          'success'
+        );
       })
       .catch((_) => {
         Swal.fire(
-          'Error!',
-          'Something went wrong with sending your email!',
+          text.alert.error[localStorage.getItem('lang') || 'bg'],
+          text.alert.eEmail[localStorage.getItem('lang') || 'bg'],
           'error'
         );
       })

@@ -85,4 +85,26 @@ export const text = {
       en: 'Send',
     },
   },
+  alert: {
+    error: {
+      bg: 'Грешка!',
+      en: 'Error!',
+    },
+    success: {
+      bg: 'Успех!',
+      en: 'Success!',
+    },
+    fields: {
+      bg: 'Всички полета са задължителни!',
+      en: 'All fields are required!',
+    },
+    sEmail: {
+      bg: 'Емайлът ви беше изпратен!',
+      en: 'Your email has been sent!',
+    },
+    eEmail: {
+      bg: 'Възниква грешка при изпращане!',
+      en: 'Something went wrong with sending your email!',
+    },
+  },
 };
