@@ -48,7 +48,7 @@ export function renderContact(ctx) {
 const contactsTemplate = (sendEmail) =>
   html`<div class="container mt-4">
     <h1 class="text-center">
-      ${text.contacts.title[localStorage.getItem('lang') || 'bg']}
+      ${text.contacts[localStorage.getItem('lang') || 'bg']}
     </h1>
     <div class="row mt-4">
       <div class="col-md-6">

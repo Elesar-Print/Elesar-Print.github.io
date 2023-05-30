@@ -5,7 +5,7 @@ export const layoutTemplate = (ctx, content) => html`<header>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-primary">
       <a class="logo navbar-brand text-white font-weight-bold" href="/">
         <img src="../../static/images/logo.png" width=60 heigth=60 /> <span>${
-          text.nav.title[localStorage.getItem('lang') || 'bg']
+          text.title[localStorage.getItem('lang') || 'bg']
         }</span>
       </a>
       <button
@@ -24,13 +24,13 @@ export const layoutTemplate = (ctx, content) => html`<header>
           <li class="nav-item">
             <a class="nav-link text-white font-weight-bold" href="/"
               ><i class="fa-solid fa-house"></i> ${
-                text.nav.home[localStorage.getItem('lang') || 'bg']
+                text.home[localStorage.getItem('lang') || 'bg']
               }</a
             >
           </li>
           <li class="nav-item">
             <a class="nav-link text-white font-weight-bold" href="/contact"><i class="fa-solid fa-phone"></i> ${
-              text.nav.contacts[localStorage.getItem('lang') || 'bg']
+              text.contacts[localStorage.getItem('lang') || 'bg']
             }</a>
           </li>
           <li class="nav-item dropdown">

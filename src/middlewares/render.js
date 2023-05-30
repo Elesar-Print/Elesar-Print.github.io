@@ -1,4 +1,5 @@
 import { render } from '../lib/lit-html.js';
+import { text } from '../utils.js';
 import { layoutTemplate } from '../views/layout.js';
 
 const root = document.getElementById('content');
@@ -14,7 +15,10 @@ export function addRender(ctx, next) {
 }
 
 function renderView(content) {
-  document.title = [this?.customTitle, 'Elesar Print']
+  document.title = [
+    this?.customTitle,
+    text.title[localStorage.getItem('lang') || 'bg'],
+  ]
     .filter((x) => x) //* Removes falsy values
     .join(' | ');
 

@@ -1,17 +1,9 @@
 export const text = {
+  title: {
+    bg: 'Елесар Принт',
+    en: 'Elesar Print',
+  },
   nav: {
-    title: {
-      bg: 'Елесар Принт',
-      en: 'Elesar Print',
-    },
-    home: {
-      bg: 'Начална Страница',
-      en: 'Home',
-    },
-    contacts: {
-      bg: 'Контакти',
-      en: 'Contacts',
-    },
     language: {
       bg: 'Език',
       en: 'Language',
@@ -22,6 +14,8 @@ export const text = {
     en: 'Elesar Print',
   },
   home: {
+    bg: 'Начална Страница',
+    en: 'Home',
     welcomeHeader: {
       bg: 'Елесар Принт',
       en: 'Elesar Print',
@@ -40,10 +34,8 @@ export const text = {
     },
   },
   contacts: {
-    title: {
-      bg: 'Контакти',
-      en: 'Contacts',
-    },
+    bg: 'Контакти',
+    en: 'Contacts',
     find: {
       bg: 'Каде можете да ни намерите',
       en: 'Where to find us',
