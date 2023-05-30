@@ -37,7 +37,7 @@ export const text = {
     bg: 'Контакти',
     en: 'Contacts',
     find: {
-      bg: 'Каде можете да ни намерите',
+      bg: 'Къде можете да ни намерите',
       en: 'Where to find us',
     },
     phone: {
