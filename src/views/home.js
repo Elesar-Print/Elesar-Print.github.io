@@ -42,15 +42,15 @@ const homeTemplate = (header, text, buttonText, clients) => html`<link
     href="../../static/css/home.css"
     rel="stylesheet"
   />
-  <div class="jumbotron mb-0">
+  <div class="jumbotron text-white mb-0" style="height: 100vh;">
     <div class="container">
       <h1 class="display-3">${header}</h1>
       <p>${text}</p>
-      <p>
+      <!-- <p>
         <a class="btn btn-primary btn-lg" href="#" role="button"
           >${buttonText} &raquo;</a
         >
-      </p>
+      </p> -->
     </div>
   </div>
   <div class="py-4 bg-primary text-white">

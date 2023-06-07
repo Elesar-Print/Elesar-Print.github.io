@@ -106,3 +106,12 @@ p {
 .slick-arrow.slick-hidden {
   display: none;
 }
+
+.jumbotron {
+  background-image: linear-gradient(
+      rgba(32, 32, 32, 0.7),
+      rgba(32, 32, 32, 0.7)
+    ),
+    url(../images/orange-pens.jpg);
+  background-size: cover;
+}
