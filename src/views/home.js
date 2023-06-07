@@ -42,7 +42,7 @@ const homeTemplate = (header, text, buttonText, clients) => html`<link
     href="../../static/css/home.css"
     rel="stylesheet"
   />
-  <div class="jumbotron text-white mb-0" style="min-height: 100vh;">
+  <div class="jumbotron text-white mb-0" style="min-height: 92vh;">
     <div class="container">
       <h1 class="display-3">${header}</h1>
       <p>${text}</p>
@@ -53,10 +53,9 @@ const homeTemplate = (header, text, buttonText, clients) => html`<link
       </p> -->
     </div>
   </div>
-  <div class="py-4 bg-primary text-white">
+  <div class="p-4 bg-primary text-white">
     <div class="row">
-      <div class="col-md-2"></div>
-      <div class="col-md-4 px-5 mb-3">
+      <div class="col-sm-6 col-md-6 px-5 mb-3">
         <h2><i class="fas fa-print"></i> Принтер Mimaki UJF-6042</h2>
         <p>
           <i class="fas fa-check"></i>
@@ -91,10 +90,9 @@ const homeTemplate = (header, text, buttonText, clients) => html`<link
           >
         </p> -->
       </div>
-      <div class="col-md-4 align-self-center">
+      <div class="col-sm-6 col-md-6 align-self-center">
         <img class="img-fluid" src="../../static/images/printer.png" />
       </div>
-      <div class="col-md-2"></div>
       <!-- <div class="col-md-4">
         <h2>Heading</h2>
         <p>
