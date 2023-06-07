@@ -42,7 +42,7 @@ const homeTemplate = (header, text, buttonText, clients) => html`<link
     href="../../static/css/home.css"
     rel="stylesheet"
   />
-  <div class="jumbotron text-white mb-0" style="height: 100vh;">
+  <div class="jumbotron text-white mb-0" style="min-height: 100vh;">
     <div class="container">
       <h1 class="display-3">${header}</h1>
       <p>${text}</p>
