@@ -42,7 +42,7 @@ const homeTemplate = (header, text, buttonText, clients) => html`<link
     href="../../static/css/home.css"
     rel="stylesheet"
   />
-  <div class="jumbotron">
+  <div class="jumbotron mb-0">
     <div class="container">
       <h1 class="display-3">${header}</h1>
       <p>${text}</p>
@@ -53,23 +53,49 @@ const homeTemplate = (header, text, buttonText, clients) => html`<link
       </p>
     </div>
   </div>
-  <div class="container">
+  <div class="py-4 bg-primary text-white">
     <div class="row">
-      <div class="col-md-4">
-        <h2>Heading</h2>
+      <div class="col-md-2"></div>
+      <div class="col-md-4 px-5 mb-3">
+        <h2><i class="fas fa-print"></i> Принтер Mimaki UJF-6042</h2>
         <p>
-          Donec id elit non mi porta gravida at eget metus. Fusce dapibus,
-          tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum
-          massa justo sit amet risus. Etiam porta sem malesuada magna mollis
-          euismod. Donec sed odio dui.
+          <i class="fas fa-check"></i>
+          Разполага с уникална глава с винтов механизъм, който подобрява
+          точността на капките мастило при печат на изображения върху различни
+          медии.
         </p>
         <p>
+          <i class="fas fa-check"></i>
+          Прецизността, с която се печата всяка точка мастило, значително
+          намалява възможността печатът да стане на ленти.
+        </p>
+        <p>
+          <i class="fas fa-check"></i>
+          Възможност да се печата с четири цвята / CMYK / плюс с 2-ино бяло, лак
+          и грунд за метал.
+        </p>
+        <p>
+          <i class="fas fa-check"></i>
+          Предлага офорт – техника, която се възползва от корозионните качества
+          на метала. Това позволява постигането на изображения с високо качество
+          и при печат върху метал.
+        </p>
+        <p>
+          <i class="fas fa-check"></i>
+          Принтирането с различни слоеве на мастило прави всяко изображение да
+          изглежда по-привлекателно за окото.
+        </p>
+        <!-- <p>
           <a class="btn btn-secondary" href="#" role="button"
             >View details &raquo;</a
           >
-        </p>
+        </p> -->
       </div>
-      <div class="col-md-4">
+      <div class="col-md-4 align-self-center">
+        <img class="img-fluid" src="../../static/images/printer.png" />
+      </div>
+      <div class="col-md-2"></div>
+      <!-- <div class="col-md-4">
         <h2>Heading</h2>
         <p>
           Donec id elit non mi porta gravida at eget metus. Fusce dapibus,
@@ -96,7 +122,7 @@ const homeTemplate = (header, text, buttonText, clients) => html`<link
             >View details &raquo;</a
           >
         </p>
-      </div>
+      </div> -->
     </div>
     <hr />
   </div>
